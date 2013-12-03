@@ -1,0 +1,499 @@
+	
+/* clouds & islands background */
+#rolling-seas {
+	background: url(../images/backdrop.png) top center repeat-x;
+	height: 580px;
+	max-width: 2800px;
+	
+	
+	
+}
+
+
+/* the good ship iOS */	
+#an-ship {
+	position: absolute;
+	bottom: 50px;
+	left: 10px;
+	z-index: 8001;
+	-webkit-animation: rockingboat 5s infinite ease-in-out;
+	animation:         rockingboat 5s infinite ease-in-out;
+}
+	
+/* the animated waves */
+#an-w1,
+#an-w2 {
+	position: absolute;
+	display: block;
+	width: 100%;
+	background-repeat: repeat-x;
+}
+
+#an-w1 {
+	height: 78px;
+	bottom: 135px;
+	background-image: url(../images/waves1.png);
+	z-index: 8000;
+	-webkit-animation: wave1 23s infinite linear;
+	animation:         wave1 23s infinite linear;
+}
+	
+#an-w2 {
+	height: 165px;
+	bottom: 0;
+	background-image: url(../images/waves2.png);
+	z-index: 8003;
+	-webkit-animation: wave2 17s infinite linear;
+	animation:         wave2 17s infinite linear;
+}	
+
+
+
+/* the animated shark */	
+#an-shark {
+	position: absolute;
+	z-index: 8001;
+	-webkit-animation: shark-bob 8s infinite ease-in-out;
+	animation:         shark-bob 8s infinite ease-in-out;
+}
+
+
+#main-content{
+
+  margin-top: -30px;
+  padding-top: 30px;
+  height: 100%;
+  background-color: #2764ab;
+  background: url(../images/bg.png);
+  background-repeat: repeat;
+  
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000000), to(#2764ab));
+  
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #2764ab, #000000);
+  
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #2764ab, #000000);
+  
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #2764ab, #000000);
+  
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #2764ab, #000000);
+  
+  
+}
+
+
+#headline{
+ 
+  padding-top: 10px;
+  padding-bottom: 80px;
+  color: #ffffff;
+  text-align:center;
+  margin:0 auto;
+  width:320px;
+  font-family:"Barber 2", 'Lucida Calligraphy', 'Apple Chancery', cursive;  font-size: 2.5em;font-weight:normal; font-style:normal; line-height: 40px; text-shadow:1px 1px #000000;
+    
+  
+}
+
+#pirate-quote{
+  padding-top:150px;
+  padding-bottom: 130px;
+  color: #ffffff;
+  text-align:center;
+  margin:0 auto;
+  width:300px;
+
+  
+
+
+  
+}
+
+#twitter-bird{
+ padding-bottom: 20px;
+  
+  color: #ffffff;
+  text-align:center;
+  margin:0 auto;
+  width:300px;
+
+  -webkit-animation: tweet 2s infinite ease-in-out;
+  animation:         tweet 2s infinite ease-in-out;
+
+
+
+
+  
+}
+
+#footerinfo{
+
+background-color:#000000;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 10px;
+color: #999999;
+font-size: 0.7em;
+font-family:'helvetica', 'arial';
+
+}
+
+
+
+
+
+/*********************
+ANIMATION SYNTAX
+*********************/
+
+.animated {
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode:    both;
+	-o-animation-fill-mode:      both;
+	animation-fill-mode:         both;
+}
+
+/* webkit browsers */
+@-webkit-keyframes rockingboat {
+   0%, 100% { -webkit-transform: rotate(2deg);               bottom: 110px; }
+   25%      { -webkit-transform: rotate(-2deg); left: 20px; bottom: 120px; }
+   50% 		{ -webkit-transform: rotate(0deg);  left: 25px;               }
+   75%      { -webkit-transform: rotate(-2deg); left: 20px; bottom: 105px; }
+}
+
+
+
+/* IE (10&Up), Firefox (latest) support unprefixed (screw Opera) */ 
+@keyframes rockingboat {
+   0%, 100% { transform: rotate(2deg);               bottom: 80px; }
+   25%      { transform: rotate(-2deg); left: 130px; bottom: 60px; }
+   50% 		{ transform: rotate(0deg);  left: 140px;               }
+   75%      { transform: rotate(-2deg); left: 130px; bottom: 70px; }
+}
+
+
+
+
+
+
+
+
+
+/* webkit browsers */
+@-webkit-keyframes tweet {
+   0%, 100% { -webkit-transform: rotate(10deg);               }
+   25%      { -webkit-transform: rotate(-10deg);  }
+   50%    { -webkit-transform: rotate(10deg);                }
+   75%      { -webkit-transform: rotate(-10deg);  }
+}
+
+/* IE (10&Up), Firefox (latest) support unprefixed (screw Opera) */ 
+@keyframes tweet {
+   0%, 100% { transform: rotate(10deg);               }
+   25%      { transform: rotate(-10deg);  }
+   50%    { transform: rotate(10deg);                 }
+   75%      { transform: rotate(-10deg);  }
+}
+
+
+
+
+/* background waves */
+@-webkit-keyframes wave1 {
+    0%  { background-position-y: 0;    background-position-x: 0px;     }
+   50%  { background-position-y: 20px;                                 } 
+   100% { background-position-y: 0;    background-position-x: -1198px; }
+}
+
+/* IE (10&Up), Firefox (latest) support unprefixed (screw Opera) */ 
+@keyframes wave1 {
+    0%  { background-position-y: 0;    background-position-x: 0px;     }
+   50%  { background-position-y: 20px;                                 } 
+   100% { background-position-y: 0;    background-position-x: -1198px; }
+}
+
+/* webkit browsers */
+@-webkit-keyframes wave2 {
+     0% { background-position-x: 0px;     }
+    50% { background-position-y: 15px;    } 
+   100% { background-position-x: -1200px; }
+}
+
+/* IE (10&Up), Firefox (latest) support unprefixed (screw Opera) */ 
+@keyframes wave2 {
+     0% { background-position-x: 0px;    }
+    50% { background-position-y: 15px;   } 
+   100% { ackground-position-x: -1200px; }
+}
+
+/* webkit browsers */
+@-webkit-keyframes shark-bob {
+    0% { left: 250px;  bottom: -10px; opacity: 0;                -webkit-transform: rotate(1deg);   }
+    7% {               bottom: 65px;  opacity: 1; z-index: 8002;                                    }
+   60% { left: 575px;  bottom: 70px;                             -webkit-transform: rotate(-10deg); } 
+   70% { left: 700px;                                            -webkit-transform: rotate(-13deg); }
+   73% {               bottom: 10px;                             -webkit-transform: rotate(-16deg); }
+   75% { left: 850px;  bottom: 20px;                             -webkit-transform: rotate(-13deg); }
+   78% {                                                         -webkit-transform: rotate(-8deg);  }
+   81% {                                                         -webkit-transform: rotate(-5deg);  }
+   90% { left: 900px;  bottom: 30px;                             -webkit-transform: rotate(0deg);   }
+   95% { left: 1000px; bottom: 15px;  opacity: 1; z-index: 8002;                                    }
+   99% { left: 1000px; bottom: 20px;  opacity: 0; z-index: -1;                                      }
+}
+
+/* IE (10&Up), Firefox (latest) support unprefixed (screw Opera) */ 
+@keyframes shark-bob {
+   0% { left: 250px;  bottom: -10px; opacity: 0;                 transform: rotate(1deg);   }
+   7% {               bottom: 65px;  opacity: 1; z-index: 8002;                             }
+  60% { left: 575px;  bottom: 70px;                              transform: rotate(-10deg); } 
+  70% { left: 700px;                                             transform: rotate(-13deg); }
+  73% {               bottom: 10px;                              transform: rotate(-16deg); }
+  75% { left: 850px;  bottom: 20px;                              transform: rotate(-13deg); }
+  78% {                                                          transform: rotate(-8deg);  }
+  81% {                                                          transform: rotate(-5deg);  }
+  90% { left: 900px;  bottom: 30px;                              transform: rotate(0deg);   }
+  95% { left: 1000px; bottom: 15px;  opacity: 1; z-index: 8002;                             }
+  99% { left: 1000px; bottom: 20px;  opacity: 0; z-index: -1;                               }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+
+      
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+
+  @media only screen and (max-width: 1023px) {
+  
+
+
+  
+    .ss-container .attendee-profile h4 {
+      text-align: left; }
+  
+    .ss-container .ss-left,
+    .ss-container .ss-right {
+      display: block;
+      padding: 0 2%;
+      width: 100%;
+      color: #ffffff; }
+
+
+        .ss-container .ss-left-bar,
+    .ss-container .ss-right-bar {
+      display: block;
+      padding: 0 2%;
+      width: 100%; }
+      
+    .ss-container .ss-left {
+      margin-top: 2em;
+      text-align: center; }
+
+      .ss-container .ss-left-bar {
+      margin-top: 2em; }
+      
+  
+  
+    .ss-container .ss-right {
+      margin-bottom: .5em; }
+
+      .ss-container .ss-right h2 {
+      margin-bottom: .5em; 
+     text-align: center; }
+
+      .ss-container .ss-right-bar {
+      margin-bottom: .5em; }
+
+#an-shark {display: none}
+      
+    
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    
+    /* =============================================================================
+       Typography
+       ========================================================================== */
+    
+
+     
+
+      .ss-container {
+          float: left;
+          overflow: hidden;
+          position: relative;
+          text-align: left;
+          width: 100%;
+          color: #ffffff;
+          padding-bottom: 100px;
+          }
+
+      .ss-row {
+          clear: both;
+          float: left;
+          padding: 30px 0;
+          position: relative;
+          width: 100%; }
+
+          .ss-row h3,
+          .ss-row h4,
+          .ss-row h5 {
+              margin: 0 }
+
+          .ss-row p {
+              line-height: 1.4 }
+
+          .ss-row * {
+              line-height: 1.1 }
+
+      .ss-left,
+      .ss-right {
+          float: left;
+          position: relative;
+          width: 50%; }
+
+      .ss-right {
+          padding-left: 1%;
+          padding-right: 8%; }
+
+      .ss-left {
+          float: left;
+          padding-right: 1%;
+          padding-left:8%;
+          text-align: right; }
+
+
+
+.ss-left-bar,
+.ss-right-bar {
+          float: left;
+          position: relative;
+          width: 50%; }
+
+      .ss-right-bar {
+          padding-left: 2% }
+
+      .ss-left-bar {
+          float: left;
+          padding-right: 2%;
+          text-align: right; }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+      .ss-container h3 span{
+          color: rgba(255,255,255,0.8);
+          font-size: 13px;
+          display: block;
+          padding-bottom: 5px;
+      }
+        
+   
+
+
+  
+
+
+
+  
+.ss-container h4,
+.ss-container h5 {
+  display: block;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  
+  width: 100%; }
+  
+
+
+  
+.registration-info h4 {
+  text-align: left; }
+  
+.registration-info li {
+  margin-bottom: .5em; }
+  
+.registration-info img {
+  margin-bottom: 1em; }
+  
+
+  
+.registration-info p {
+  margin-bottom: .25em; }
+  
+
+  
+.ss-left,
+.ss-right {
+  min-height: 1px; }
+
+.ss-left-bar,
+.ss-right-bar {
+  min-height: 1px; }
+
+
+  
+.ss-container p + h4 {
+  margin-top: .5em; }
+
+  
+
+}
+  

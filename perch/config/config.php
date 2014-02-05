@@ -1,11 +1,11 @@
 <?php
 
-    define('PERCH_LICENSE_KEY', 'P21306-KHV370-CEJ616-HTV994-LZK010');
+    define('PERCH_LICENSE_KEY', '');
 
-    define("PERCH_DB_USERNAME", 'wellyboo_user');
-    define("PERCH_DB_PASSWORD", 'qlfmzy');
-    define("PERCH_DB_SERVER", "localhost");
-    define("PERCH_DB_DATABASE", "wellyboo_perch");
+    define("PERCH_DB_USERNAME", '');
+    define("PERCH_DB_PASSWORD", '');
+    define("PERCH_DB_SERVER", "");
+    define("PERCH_DB_DATABASE", "");
     define("PERCH_DB_PREFIX", "perch2_");
     define('PERCH_RWD', true);
     
